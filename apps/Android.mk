@@ -68,7 +68,10 @@ include $(BUILD_PREBUILT)
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/apps/Lawnchair/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
-    vendor/samsung/apps/Lawnchair/lawnchair-hiddenapi-package-whitelist.xml$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+    vendor/samsung/apps/Lawnchair/lawnchair-hiddenapi-package-whitelist.xml$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml \
+    vendor/samsung/extra/fonts/fonts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts.xml \
+    vendor/samsung/extra/fonts/GoogleSans/GoogleSans-Medium.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/GoogleSans-Medium.ttf \
+    vendor/samsung/extra/fonts/GoogleSans/GoogleSans-Regular.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/GoogleSans-Regular.ttf
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := RemovePackages
