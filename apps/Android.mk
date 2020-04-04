@@ -52,6 +52,20 @@ LOCAL_MODULE_SUFFIX := .apk
 LOCAL_OVERRIDES_PACKAGES := Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo Quickstep
 include $(BUILD_PREBUILT)
 
+#FileExplorer
+include $(CLEAR_VARS)
+LOCAL_MODULE := MiXplorer
+LOCAL_MODULE_OWNER := samsung
+LOCAL_SRC_FILES := $(LOCAL_MODULE)/$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_DEX_PREOPT := false
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_OVERRIDES_PACKAGES := CMFileManager Amaze AmazeFM crDroidFileManager
+include $(BUILD_PREBUILT)
+
 PRODUCT_COPY_FILES += \
     vendor/samsung/apps/Lawnchair/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
     vendor/samsung/apps/Lawnchair/lawnchair-hiddenapi-package-whitelist.xml$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
